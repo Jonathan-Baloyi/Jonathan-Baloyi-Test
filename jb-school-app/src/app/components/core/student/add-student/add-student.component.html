@@ -1,0 +1,60 @@
+<div class="card w-25 mx-auto p-2 mt-4">
+  <h2 class="p-2">Add Student</h2>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div class="form-group p-2">
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" placeholder="Name" class="form-control" required />
+      <span class="text-danger" *ngIf="!studentForm.controls['name'].valid &&
+                 studentForm.controls['name']?.touched"> Name is required</span>
+    </div>
+
+
+    <div class="form-group p-2">
+      <label for="surname">Surname</label>
+      <input type="text" formControlName="surname" placeholder="Surname" class="form-control" />
+      <span class="text-danger" *ngIf="!studentForm.controls['surname'].valid &&
+      studentForm.controls['surname']?.touched"> Surname is required</span>
+    </div>
+
+    <div class="form-group p-2">
+      <label for="dateOfBirth">Date Of Birth</label>
+      <input type="text" formControlName="dateOfBirth" placeholder="Date Of Birth" class="form-control" />
+      <span class="text-danger" *ngIf="!studentForm.controls['dateOfBirth'].valid &&
+      studentForm.controls['dateOfBirth']?.touched"> Date Of Birth is required</span>
+    </div>
+
+    <div class="form-group p-2">
+      <label for="gender">Gender</label>
+      <input type="text" formControlName="gender" placeholder="Gender" class="form-control" />
+      <span class="text-danger" *ngIf="!studentForm.controls['gender'].valid &&
+      studentForm.controls['gender']?.touched"> Gender is required</span>
+    </div>
+
+    <div class="form-group p-2">
+      <label for="grade">Grade</label>
+      <input type="text" formControlName="grade" placeholder="Grade" class="form-control" />
+      <span class="text-danger" *ngIf="!studentForm.controls['grade'].valid &&
+      studentForm.controls['grade']?.touched"> Grade is required</span>
+    </div>
+
+    <div class="form-group p-2">
+      <label for="schoolCode">School Code</label>
+      <input type="text" formControlName="schoolCode" placeholder="School Code" class="form-control" />
+      <span class="text-danger" *ngIf="!studentForm.controls['schoolCode'].valid &&
+      studentForm.controls['schoolCode']?.touched"> School Code is required</span>
+    </div>
+
+    <div class="form-group p-2">
+      <label for="School Name">School Name</label>
+      <input type="text" formControlName="schoolName" placeholder="School Name" class="form-control" />
+      <span class="text-danger" *ngIf="!studentForm.controls['schoolName'].valid &&
+      studentForm.controls['schoolName']?.touched"> School Name is required</span>
+    </div>
+
+    <div class="form-group p-2">
+      <button class="btn btn-outline-primary add-student-btn" [disabled]="!studentForm.valid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

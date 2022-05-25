@@ -1,0 +1,28 @@
+<div class="pt-5 pb-5 pr-5 pl-5 mx-auto">
+  <p class="text-center pt-5 pb-5">The table displays a list of students sorted by school and surname</p>
+  <button class="btn btn-outline-primary add-student-btn" (click)="onAddStudentBtnClick()">Add Student</button>
+  <table class="table table-striped table-bordered w-75 h-100 mx-auto">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Grade</th>
+        <th scope="col">School Code</th>
+        <th scope="col">School Name</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let student of students; let i = index">
+      <tr>
+        <td>{{student.name}} {{student.surname}}</td>
+        <td>{{student.dateOfBirth}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.grade}}</td>
+        <td>{{student.schoolCode}}</td>
+        <td>{{student.schoolName}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>

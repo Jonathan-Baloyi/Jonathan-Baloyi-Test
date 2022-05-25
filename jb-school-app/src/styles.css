@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'app/scss/home.scss';
+@import 'app/scss/navbar.scss';
+@import 'app/scss/footer.scss';
+@import 'app/scss/container.scss';
+
+/* Import of bootstrap */
+@import "~bootstrap/dist/css/bootstrap.css"

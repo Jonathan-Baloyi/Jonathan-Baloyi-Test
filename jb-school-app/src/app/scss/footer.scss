@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+footer {
+  height: 200px;
+  background-image: linear-gradient(260deg, #80C3F3 0%, #4A90E2 100%);
+  background-color: $navbar-bg-color;
+  bottom: 0;
+  color: $ab-white-color !important;
+  padding: 20px;
+  font-size: 12px;
+}
